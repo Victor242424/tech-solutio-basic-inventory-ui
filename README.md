@@ -1,31 +1,31 @@
-# Setup Instructions
+# Instruções de Configuração
 
 ## Frontend (Angular)
 
-### Prerequisites
+### Pré-requisitos
 - Node.js 18+
 - npm
 
-### Setup
+### Configuração
 
-1. Navigate to frontend directory:
+1. Navegue até o diretório:
 ```bash
 cd tech-solutio-basic-inventory-ui
 ```
 
-2. Install dependencies:
+2. Instale as dependências:
 ```bash
 npm install
 ```
 
-3. Start development server:
+3. Inicie o servidor de desenvolvimento:
 ```bash
 npm start
 ```
 
-The frontend will run on `http://localhost:4200`
+O frontend será executado em `http://localhost:4200`
 
-## Project Structure
+## Estrutura do Projeto
 
 ### Frontend
 ```
