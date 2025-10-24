@@ -10,7 +10,7 @@
 
 1. Navegue até o diretório:
 ```bash
-cd tech-solutio-basic-inventory 
+cd tech-solutio-basic-inventory-ui 
 ```
 
 2. Inicie o banco de dados e a aplicação:
