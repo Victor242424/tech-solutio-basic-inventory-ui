@@ -6,7 +6,21 @@
 - Node.js 18+
 - npm
 
-### Configuração
+### Configuração com Docker (Recomendado)
+
+1. Navegue até o diretório:
+```bash
+cd tech-solutio-basic-inventory 
+```
+
+2. Inicie o banco de dados e a aplicação:
+```bash
+docker-compose up -d
+```
+
+Será executado em `http://localhost:4200`
+
+### Configuração sem Docker
 
 1. Navegue até o diretório:
 ```bash
@@ -22,8 +36,7 @@ npm install
 ```bash
 npm start
 ```
-
-O frontend será executado em `http://localhost:4200`
+Será executado em `http://localhost:4200`
 
 ## Estrutura do Projeto
 
