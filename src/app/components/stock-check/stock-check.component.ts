@@ -39,7 +39,7 @@ export class StockCheckComponent implements OnInit {
         this.loading = false;
       },
       error: (err) => {
-        this.error = 'Failed to check stock information';
+        this.error = 'Falha ao verificar informações de estoque';
         this.loading = false;
         console.error(err);
       }

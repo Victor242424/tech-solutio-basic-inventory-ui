@@ -35,7 +35,7 @@ export class ProductListComponent implements OnInit {
         this.loading = false;
       },
       error: (err) => {
-        this.error = 'Failed to load products';
+        this.error = 'Falha ao carregar os produtos';
         this.loading = false;
         console.error(err);
       }
@@ -45,13 +45,13 @@ export class ProductListComponent implements OnInit {
   deleteProduct(id: number | undefined): void {
     if (!id) return;
     
-    if (confirm('Are you sure you want to delete this product?')) {
+    if (confirm('Tem certeza que deseja excluir este produto?')) {
       this.productService.deleteProduct(id).subscribe({
         next: () => {
           this.loadProducts();
         },
         error: (err) => {
-          this.error = 'Failed to delete product';
+          this.error = 'Falha ao excluir o produto';
           console.error(err);
         }
       });

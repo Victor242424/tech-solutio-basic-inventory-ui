@@ -49,7 +49,7 @@ export class ProductFormComponent implements OnInit {
         this.loading = false;
       },
       error: (err) => {
-        this.error = 'Failed to load product';
+        this.error = 'Falha ao carregar o produto';
         this.loading = false;
         console.error(err);
       }
@@ -66,7 +66,7 @@ export class ProductFormComponent implements OnInit {
           this.router.navigate(['/products']);
         },
         error: (err) => {
-          this.error = 'Failed to update product';
+          this.error = 'Falha ao atualizar o produto';
           this.loading = false;
           console.error(err);
         }
@@ -77,7 +77,7 @@ export class ProductFormComponent implements OnInit {
           this.router.navigate(['/products']);
         },
         error: (err) => {
-          this.error = 'Failed to create product';
+          this.error = 'Falha ao criar o produto';
           this.loading = false;
           console.error(err);
         }

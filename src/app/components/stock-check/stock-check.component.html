@@ -1,9 +1,9 @@
 <div class="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
-  <h2 class="text-3xl font-bold text-gray-800 mb-6">Stock Check</h2>
+  <h2 class="text-3xl font-bold text-gray-800 mb-6">Verificação de Estoque</h2>
 
   <div *ngIf="loading" class="text-center py-8">
     <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-    <p class="mt-4 text-gray-600">Checking stock...</p>
+    <p class="mt-4 text-gray-600">Verificando estoque...</p>
   </div>
 
   <div *ngIf="error" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -12,31 +12,31 @@
 
   <div *ngIf="!loading && stockInfo" class="space-y-6">
     <div class="border-b pb-4">
-      <h3 class="text-xl font-semibold text-gray-700 mb-2">Product Information</h3>
+      <h3 class="text-xl font-semibold text-gray-700 mb-2">Informações do Produto</h3>
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <p class="text-sm text-gray-600">Product ID</p>
+          <p class="text-sm text-gray-600">ID do Produto</p>
           <p class="text-lg font-medium">{{ stockInfo.id }}</p>
         </div>
         <div>
-          <p class="text-sm text-gray-600">Product Name</p>
+          <p class="text-sm text-gray-600">Nome do Produto</p>
           <p class="text-lg font-medium">{{ stockInfo.name }}</p>
         </div>
       </div>
     </div>
 
     <div class="border-b pb-4">
-      <p class="text-sm text-gray-600 mb-1">Description</p>
+      <p class="text-sm text-gray-600 mb-1">Descrição</p>
       <p class="text-gray-800">{{ stockInfo.description }}</p>
     </div>
 
     <div class="grid grid-cols-2 gap-4 border-b pb-4">
       <div>
-        <p class="text-sm text-gray-600">Price</p>
-        <p class="text-2xl font-bold text-green-600">${{ stockInfo.price.toFixed(2) }}</p>
+        <p class="text-sm text-gray-600">Preço</p>
+        <p class="text-2xl font-bold text-green-600">R$ {{ stockInfo.price.toFixed(2) }}</p>
       </div>
       <div>
-        <p class="text-sm text-gray-600">Stock Quantity</p>
+        <p class="text-sm text-gray-600">Quantidade em Estoque</p>
         <p class="text-2xl font-bold" [class]="stockInfo.belowMinimumStock ? 'text-red-600' : 'text-green-600'">
           {{ stockInfo.stockQuantity }}
         </p>
@@ -54,7 +54,7 @@
             {{ stockInfo.stockStatus }}
           </h4>
           <p class="text-sm" [class]="stockInfo.belowMinimumStock ? 'text-red-700' : 'text-green-700'">
-            {{ stockInfo.belowMinimumStock ? 'Stock is below minimum threshold (10 units)' : 'Stock levels are adequate' }}
+            {{ stockInfo.belowMinimumStock ? 'Estoque abaixo do limite mínimo (10 unidades)' : 'Níveis de estoque adequados' }}
           </p>
         </div>
       </div>
@@ -63,7 +63,7 @@
     <button 
       (click)="goBack()"
       class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-200">
-      Back to Products
+      Voltar para Produtos
     </button>
   </div>
 </div>
